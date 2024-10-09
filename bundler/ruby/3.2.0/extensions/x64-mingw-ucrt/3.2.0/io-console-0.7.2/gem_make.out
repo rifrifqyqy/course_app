@@ -1,0 +1,25 @@
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+checking for rb_io_path()... no
+checking for rb_io_descriptor()... yes
+checking for rb_io_get_write_io()... yes
+checking for rb_io_closed_p()... no
+checking for rb_io_open_descriptor()... no
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-77bcb6 sitelibdir\=./.gem.20241007-21072-77bcb6 clean
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-77bcb6 sitelibdir\=./.gem.20241007-21072-77bcb6
+generating console-x64-mingw-ucrt.def
+compiling console.c
+linking shared-object io/console.so
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-77bcb6 sitelibdir\=./.gem.20241007-21072-77bcb6 install
+/usr/bin/install -c -m 0755 console.so ./.gem.20241007-21072-77bcb6/io
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/io-console-0.7.2/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-77bcb6 sitelibdir\=./.gem.20241007-21072-77bcb6 clean

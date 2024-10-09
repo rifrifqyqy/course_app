@@ -1,0 +1,31 @@
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-qyglaz sitelibdir\=./.gem.20241007-21072-qyglaz clean
+cd libyaml && make clean
+/bin/sh: line 1: cd: libyaml: No such file or directory
+make: [Makefile:287: clean-so] Error 1 (ignored)
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-qyglaz sitelibdir\=./.gem.20241007-21072-qyglaz
+generating psych-x64-mingw-ucrt.def
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.so
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-qyglaz sitelibdir\=./.gem.20241007-21072-qyglaz install
+/usr/bin/install -c -m 0755 psych.so ./.gem.20241007-21072-qyglaz
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-qyglaz sitelibdir\=./.gem.20241007-21072-qyglaz clean
+cd libyaml && make clean
+/bin/sh: line 1: cd: libyaml: No such file or directory
+make: [Makefile:287: clean-so] Error 1 (ignored)

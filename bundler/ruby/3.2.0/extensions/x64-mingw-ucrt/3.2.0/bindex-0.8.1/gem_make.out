@@ -1,0 +1,19 @@
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-vddwyw sitelibdir\=./.gem.20241007-21072-vddwyw clean
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-vddwyw sitelibdir\=./.gem.20241007-21072-vddwyw
+generating cruby-x64-mingw-ucrt.def
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-vddwyw sitelibdir\=./.gem.20241007-21072-vddwyw install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20241007-21072-vddwyw/skiptrace/internal
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20241007-21072-vddwyw sitelibdir\=./.gem.20241007-21072-vddwyw clean

@@ -1,0 +1,11 @@
+pkg/*
+*.gem
+*.sw*
+.bundle
+spec/public
+.rvmrc
+.ruby-version
+Gemfile.lock
+gemfiles/*.lock
+log/*
+.idea

@@ -1,0 +1,39 @@
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bson-5.0.1/ext/bson
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bson-5.0.1/ext/bson
+make DESTDIR\= sitearchdir\=./.gem.20241007-20592-5q5ogy sitelibdir\=./.gem.20241007-20592-5q5ogy clean
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bson-5.0.1/ext/bson
+make DESTDIR\= sitearchdir\=./.gem.20241007-20592-5q5ogy sitelibdir\=./.gem.20241007-20592-5q5ogy
+generating bson_native-x64-mingw-ucrt.def
+compiling bytebuf.c
+compiling endian.c
+compiling init.c
+compiling libbson-utf8.c
+compiling read.c
+read.c: In function 'rb_bson_byte_buffer_get_hash':
+read.c:421:90: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long int' [-Wformat=]
+  421 |     pvt_raise_decode_error(rb_sprintf("Expected to read %d bytes for the hash but read %ld bytes", length, READ_PTR(b) - start_ptr));
+      |                                                                                        ~~^
+      |                                                                                          |
+      |                                                                                          long int
+      |                                                                                        %lld
+read.c: In function 'rb_bson_byte_buffer_get_array':
+read.c:452:90: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'long long int' [-Wformat=]
+  452 |     pvt_raise_decode_error(rb_sprintf("Expected to read %d bytes for the hash but read %ld bytes", length, READ_PTR(b) - start_ptr));
+      |                                                                                        ~~^
+      |                                                                                          |
+      |                                                                                          long int
+      |                                                                                        %lld
+compiling util.c
+compiling write.c
+linking shared-object bson_native.so
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bson-5.0.1/ext/bson
+make DESTDIR\= sitearchdir\=./.gem.20241007-20592-5q5ogy sitelibdir\=./.gem.20241007-20592-5q5ogy install
+/usr/bin/install -c -m 0755 bson_native.so ./.gem.20241007-20592-5q5ogy
+
+current directory: D:/RQ/Kuliah/UNPAS/Server/course_app/bundler/ruby/3.2.0/gems/bson-5.0.1/ext/bson
+make DESTDIR\= sitearchdir\=./.gem.20241007-20592-5q5ogy sitelibdir\=./.gem.20241007-20592-5q5ogy clean
