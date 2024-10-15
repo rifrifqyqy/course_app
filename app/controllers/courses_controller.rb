@@ -14,8 +14,10 @@ class CoursesController < ApplicationController
     end
   end
 
+  def show
+    @course = Course.find(params[:id])
+  end
   private
-
   def course_params
     # Izinkan nested attributes untuk materials
     params.require(:course).permit(:title, :thumbnail, :description, materials_attributes: [:title, :description, :content, :_destroy])
