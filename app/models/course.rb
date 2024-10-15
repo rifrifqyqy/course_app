@@ -2,7 +2,7 @@ class Course
   include Mongoid::Document
   include Mongoid::Timestamps
   field :title, type: String
-  field :thumbnail, type: String
+  field :thumbnail, type: String  
   field :description, type: String
 
    # Asosiasi dengan materials
