@@ -1,52 +1,59 @@
-<%= javascript_include_tag 'application' %>
-<%= javascript_include_tag Ckeditor.cdn_url %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+  <main class="flex f">
+    <section>
+      Add courses data
+    </section>
+    <section>
+      <h1 class="text-red-800">Add New Course</h1>
+      <%= form_with model: @course do |f| %>
+      <div>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+      </div>
 
-<h1 class="text-red-800">Add New Course</h1>
-<%= form_with model: @course do |f| %>
-<div>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-</div>
+      <div>
+        <%= f.label :thumbnail, "Upload Thumbnail" %>
+        <%= f.file_field :thumbnail %>
+      </div>
 
-<div>
-  <%= f.label :thumbnail, "Upload Thumbnail" %>
-  <%= f.file_field :thumbnail %>
-</div>
+      <div>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
 
-<div>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-</div>
+      <h2>Materials</h2>
+      <div id="materials">
+        <%= f.fields_for :materials do |material_form| %>
+        <div class="material-fields">
+          <div>
+            <%= material_form.label :title, "Material Title" %>
+            <%= material_form.text_field :title %>
+          </div>
 
-<h2>Materials</h2>
-<div id="materials">
-  <%= f.fields_for :materials do |material_form| %>
-  <div class="material-fields">
-    <div>
-      <%= material_form.label :title, "Material Title" %>
-      <%= material_form.text_field :title %>
-    </div>
+          <div>
+            <%= material_form.label :description, "Material Description" %>
+            <%= material_form.text_area :description %>
+          </div>
 
-    <div>
-      <%= material_form.label :description, "Material Description" %>
-      <%= material_form.text_area :description %>
-    </div>
+          <div>
+            <%= material_form.label :content, "Material Content" %>
+            <%= material_form.text_area :content, class: 'ckeditor' %>
+          </div>
 
-    <div>
-      <%= material_form.label :content, "Material Content" %>
-      <%= material_form.text_area :content, class: 'ckeditor' %>
-    </div>
+          <%= material_form.check_box :_destroy %> <%= material_form.label :_destroy, "Remove this material" %>
+        </div>
+        <% end %>
+      </div>
 
-    <%= material_form.check_box :_destroy %> <%= material_form.label :_destroy, "Remove this material" %>
-  </div>
+      <div>
+        <%= link_to "Add Material", '#', id: 'add-material' %>
+      </div>
+
+      <div>
+        <%= f.submit "Create Course" %>
+      </div>
+    </section>
+  </main>
+
   <% end %>
-</div>
-
-<div>
-  <%= link_to "Add Material", '#', id: 'add-material' %>
-</div>
-
-<div>
-  <%= f.submit "Create Course" %>
-</div>
-<% end %>
