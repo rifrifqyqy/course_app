@@ -1,0 +1,25 @@
+<%# mengubah title menjadi Lilearnv di rails dengan erb %>
+<% content_for :title, "Li-Learnv | Beranda" %>
+
+<%# navbar comps %>
+<%= render 'shared/nav' %>
+
+<%# main comps %>
+<main class="w-full">
+
+  <%# Hero section %>
+
+  <section class=" flex flex-col xl:p-8 max-xl:p-6 max-lg:p-4 gap-16">
+    <article class="text-center items-center flex flex-col gap-4 mx-auto max-w-[60%]">
+      <h1 class="text-4xl font-medium">Ensures your succeed in coding playground with structured, engaging, and fun courses.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci expedita, eligendi explicabo saepe consequatur!</p>
+      <div class="flex gap-4">
+        <%= railsbutton_secondary("Lihat Course", "/")%>
+        <%= railsbutton_primary("Daftar", "/")%>
+      </div>
+
+    </article>
+
+    <div class="bg-cover bg-center h-[380px] rounded-3xl" style="background-image: url('https://img.freepik.com/free-photo/close-up-student-reading-book_23-2148888822.jpg?t=st=1729128707~exp=1729132307~hmac=7eed677118f3c44b3d5242061a6b18c4463755069a88df82f671d9fcaf90cb79&w=2048')"></div>
+  </section>
+</main>
