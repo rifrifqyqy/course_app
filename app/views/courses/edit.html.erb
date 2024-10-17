@@ -1,0 +1,50 @@
+<%= javascript_include_tag 'application' %>
+<%= javascript_include_tag '_preview_thumb' %>
+<%= javascript_include_tag Ckeditor.cdn_url %>
+
+<main class="flex f">
+  <section>
+    <h1 class="text-red-800">Edit Course</h1>
+    <%= form_with model: @course, local: true do |f| %>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div>
+      <%= f.label :thumbnail, "Upload Thumbnail" %>
+      <%= f.file_field :thumbnail, id: "thumbnail-upload" %>
+      <img id="thumbnail-preview" src="<%= @course.thumbnail.url if @course.thumbnail.present? %>" alt="Thumbnail Preview" style="display: <%= @course.thumbnail.present? ? 'block' : 'none' %>; max-width: 200px; margin-top: 10px;">
+    </div>
+        
+    <% if @course.thumbnail.present? %>
+    <div>
+      <h3>Current Thumbnail:</h3>
+      <%= image_tag @course.thumbnail.url, alt: "Current Thumbnail", style: "max-width: 200px; height: auto;" %>
+    </div>
+    <% end %>
+
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+
+    <h2>Materials</h2>
+    <div id="materials" data-new-material-html="<%= f.fields_for :materials, Material.new, child_index: 'NEW_RECORD' do |material_form| %>
+        <%= render 'material_fields', f: material_form %>
+      <% end.gsub("\n", '') %>">
+      <%= f.fields_for :materials do |material_form| %>
+      <%= render 'material_fields', f: material_form %>
+      <% end %>
+    </div>
+
+    <div>
+      <%= link_to "Add Material", '#', id: 'add-material' %>
+    </div>
+
+    <div>
+      <%= f.submit "Update Course" %>
+    </div>
+    <% end %>
+  </section>
+</main>
