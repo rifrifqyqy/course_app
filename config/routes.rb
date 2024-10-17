@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/Index"
   mount Ckeditor::Engine => '/ckeditor'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -16,5 +17,5 @@ Rails.application.routes.draw do
     resources :materials, except: [:index]
   end
 
-  root "courses#index"
+  root "home#index" # Mengarahkan root path ke home#index
 end
