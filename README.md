@@ -7,10 +7,10 @@ This is a fullstack e-course management application built using Rails 7 and Mong
 
 ## Technologies
 
-![Rails](https://img.shields.io/badge/Rails-7.2-red)
-![MongoDB](https://img.shields.io/badge/MongoDB-4.4-green)
-![CKEditor](https://img.shields.io/badge/CKEditor-4-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Ruby](https://img.shields.io/badge/ruby-d21203.svg?style=for-the-badge&logo=ruby&logoColor=white)
+![Rails](https://img.shields.io/badge/ruby%20on%20RAILS-d21203.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoID-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
+![MIT](https://img.shields.io/badge/MIT-%234ea94b.svg?style=for-the-badge) 
 
 Table of Contents
 
