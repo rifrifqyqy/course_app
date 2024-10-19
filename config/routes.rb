@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get "sessions/new"
+  get "sessions/create"
+  get "sessions/destroy"
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
   get "home/Index"
   mount Ckeditor::Engine => '/ckeditor'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -16,6 +22,6 @@ Rails.application.routes.draw do
   resources :courses do
     resources :materials, except: [:index]
   end
-
+# routes untuk course/new
   root "home#index" # Mengarahkan root path ke home#index
 end
