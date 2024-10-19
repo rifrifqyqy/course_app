@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  before_action :require_login, only: [:new, :create]
   def new
     @course = Course.new
     # Buat objek material kosong agar dapat ditampilkan di form
