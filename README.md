@@ -46,26 +46,34 @@ ImageMagick (for image processing)
 Follow these steps to set up the project locally:
 
 Clone the repository:
-
+```bash
 git clone https://github.com/your-username/your-repo-name.git
+```
+```bash
 cd your-repo-name
+```
 Install required gems: Run the following command to install all the Ruby dependencies.
-
+```bash
 bundle install
+```
 Install JavaScript dependencies: Ensure that you have Node.js and Yarn installed. Then, run:
-
+```bash
 yarn install
+```
 Set up MongoDB: Make sure you have MongoDB installed and running on your system. Configure the MongoDB connection in config/mongoid.yml.
 
 Set up the database: Since we are using MongoDB with Mongoid, the database is automatically created on first interaction, but you can create it with:
-
+```bash
 rails db:seed
+```
 Precompile assets (optional for production):
-
+```bash
 rails assets:precompile
+```
 Start the Rails server: Run the following command to start the development server:
-
+```bash
 rails server
+```
 You can access the application at http://localhost:3000.
 
 ## Usage
@@ -79,8 +87,9 @@ Managing Materials
 You can dynamically add and remove materials using the "Add Material" button. The materials can be edited inline within the course form.
 Testing
 This project uses RSpec for testing. To run the tests, use the following command:
-
+```bash
 bundle exec rspec
+```
 You can also write feature and integration tests to ensure the application's behavior is correct.
 
 ## Contributing
@@ -89,8 +98,14 @@ We welcome contributions! If you'd like to contribute to the project, here's how
 
 Fork the repository.
 Create a new feature branch: git checkout -b my-new-feature.
-Commit your changes: git commit -am 'Add some feature'.
-Push to the branch: git push origin my-new-feature.
+Commit your changes: 
+```bash
+git commit -am 'Add some feature'
+```
+Push to the branch: 
+```bash
+git push origin my-new-feature 
+```
 Submit a pull request.
 Please ensure your code adheres to the coding standards and includes relevant tests.
 
