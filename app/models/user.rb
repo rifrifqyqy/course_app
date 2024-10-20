@@ -4,7 +4,11 @@ class User
   include Mongoid::Timestamps
 
   field :username, type: String
-  field :password, type: String  # Jika Anda menyimpan password secara langsung (tidak disarankan untuk keamanan)
+  field :password, type: String
+  field :role, type: String, default: 'user'   # Jika Anda menyimpan password secara langsung (tidak disarankan untuk keamanan)
+
+  # Validasi unik untuk username
+  validates :username, presence: true, uniqueness: true
 
   # Metode untuk memverifikasi password
   def self.authenticate(username, password)
