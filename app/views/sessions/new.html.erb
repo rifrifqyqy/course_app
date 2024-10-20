@@ -1,19 +1,47 @@
 <!-- app/views/sessions/new.html.erb -->
-<h1>Login</h1>
+<style>
+  input:-webkit-autofill {
+    background-color: transparent !important;
+    color: inherit !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  }
+</style>
 
-<%= form_with(url: login_path, method: :post) do %>
-  <div>
-    <%= label_tag :username %>
-    <%= text_field_tag :username, nil, placeholder: "Masukkan username" %>
-  </div>
+<main class="grid grid-cols-5 h-dvh bg-zinc-100">
+  <section class="flex col-span-2">
+    <div class="m-auto flex flex-col gap-8 w-fit h-fit items-center">
+      <article>
+        <h1 class="text-[32px] font-semibold uppercase w-fit">log in</h1>
+        <p class="text-lg text-zinc-500">Welcome back!, please log in to your account</p>
+      </article>
 
-  <div>
-    <%= label_tag :password %>
-    <%= password_field_tag :password, nil, placeholder: "Masukkan password" %>
-  </div>
+      <%= form_with(url: login_path, method: :post) do %>
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+          <%= label_tag :username, "Username",class: "uppercase text-zinc-500" %>
+          <div class="focus-within:ring-amber-500 focus-within:ring-2 rounded-lg overflow-hidden">
+            <%= text_field_tag :username, nil, placeholder: "Masukkan username", class: "h-[50px] w-[400px] pl-4 bg-opacity-0 border-0 focus:ring-0 outline-none bg-transparent valid:bg-transparent default:bg-transparent autofill:bg-transparent appearance-none" %>
+          </div>
 
-  <div>
-    <%= submit_tag "Login" %>
-  </div>
-<% end %>
+        </div>
 
+        <div class="flex flex-col gap-2">
+          <%= label_tag :password,"Password", class: "uppercase text-zinc-500" %>
+          <div class="focus-within:ring-amber-500 focus-within:ring-2 rounded-lg overflow-hidden">
+            <%= password_field_tag :password, nil, placeholder: "Masukkan password",class: "h-[50px] w-[400px] pl-4 bg-opacity-0 border-0 focus:ring-0 outline-none bg-transparent valid:bg-transparent default:bg-transparent autofill:bg-transparent appearance-none" %>
+          </div>
+        </div>
+      </div>
+      <button type="submit">Log In</button>
+    </div>
+    <% end %>
+    </div>
+
+  </section>
+
+  <section class="max-h-dvh p-5 col-span-3">
+    <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="h-[100%] w-full rounded-2xl object-cover" />
+  </section>
+
+
+</main>
