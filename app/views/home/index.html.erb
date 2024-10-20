@@ -6,7 +6,8 @@
   "https://sponsors.vuejs.org/images/sentry.avif",
   "https://sponsors.vuejs.org/images/laravel.avif",
   "https://sponsors.vuejs.org/images/vuejobs.avif",
-  "https://sponsors.vuejs.org/images/vuemastery.avif"
+  "https://sponsors.vuejs.org/images/vuemastery.avif",
+  "https://sponsors.vuejs.org/images/y8.avif"
 ] %>
 <%# navbar comps %>
 <%= render 'shared/nav' %>
@@ -14,15 +15,6 @@
 
 <%# main comps %>
 <main class="w-full text-zinc-700">
-  <%# buatkan kondisi tampilkan welcome current user yang login, jika tidak login maka  tampilkan welcome saja %>
-  <% if logged_in? %>
-  <p>Welcome, <%= current_user.username %>!</p>
-  <%= link_to 'Logout', logout_path, method: :delete %>
-  <% else %>
-  <% end %>
-
-
-
   <%# Hero section %>
   <section class=" flex flex-col xl:p-8 max-xl:p-6 max-lg:p-4 gap-16">
     <article class="text-center items-center flex flex-col gap-4 mx-auto max-w-[60%]">
@@ -30,7 +22,7 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci expedita, eligendi explicabo saepe consequatur!</p>
       <div class="flex gap-4">
         <%= railsbutton_secondary("Lihat Course", "/")%>
-        <%= railsbutton_primary("Daftar", "/")%>
+        <%= railsbutton_primary("Daftar", "/login")%>
       </div>
 
     </article>
@@ -40,7 +32,7 @@
 
   <%# sponsorhip %>
   <section class="xl:p-8 max-xl:p-6 max-lg:p-4">
-    <div class="justify-evenly w-full bg-red-200 grid grid-cols-4 justify-items-center">
+    <div class="justify-evenly w-full grid grid-cols-5 justify-items-center">
       <!-- Gambar set pertama -->
       <%  images.each do |image_url| %>
       <img src="<%= image_url %>" alt="" class="h-[60px] w-full p-2 object-contain">
