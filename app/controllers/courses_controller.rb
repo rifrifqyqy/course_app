@@ -1,5 +1,8 @@
 class CoursesController < ApplicationController
-  before_action :require_login, only: [:new, :create]
+  # limit acces to admin
+  before_action :require_admin, only: [:new, :create, :update, :edit]
+
+
   def new
     @course = Course.new
     # Buat objek material kosong agar dapat ditampilkan di form
