@@ -11,7 +11,6 @@ This is a fullstack e-course management application built using Rails 7 and Mong
 ![Rails](https://img.shields.io/badge/ruby%20on%20RAILS-d21203.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) 
 ![MongoDB](https://img.shields.io/badge/MongoID-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
-![MIT](https://img.shields.io/badge/MIT-%234ea94b.svg?style=for-the-badge) 
 
 Table of Contents
 
