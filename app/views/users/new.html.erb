@@ -1,0 +1,27 @@
+<!-- app/views/users/new.html.erb -->
+<h1>Sign Up</h1>
+
+<%= form_with model: @user, url: signup_path do |f| %>
+
+<!-- Jika ada error, tampilkan pesan di sini -->
+<% if @user.errors.any? %>
+<div class="alert alert-danger">
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+</div>
+
+<div>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+
+<%= f.submit "Sign Up" %>
+<% end %>
